@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aaria Greed Guard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+
+    body {
+      font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    .modal-backdrop {
+      background-color: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(6px);
+    }
+
+    .image-style {
+      border-radius: 1rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      transition: transform 0.5s ease;
+    }
+
+    .image-style:hover {
+      transform: scale(1.05);
+    }
+
+    span {
+      transition: color 0.3s ease;
+    }
+
+    span:hover {
+      color: #facc15;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-zinc-900 to-black text-white min-h-screen">
+
+  <!-- Hero Section -->
+  <section class="flex flex-col items-center justify-center text-center px-6 py-20 space-y-8">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold animate-pulse bg-gradient-to-r from-red-500 to-yellow-400 bg-clip-text text-transparent">
+      Discipline Wins. Greed Destroys.
+    </h1>
+    <h2 class="text-xl sm:text-2xl text-zinc-300" id="subhead">
+      Aaria Warns Before You Burn.
+    </h2>
+    <p class="max-w-xl text-zinc-400 mt-4">
+      Protect your money. Master your mindset. Talk to Aaria now and stop greed before it costs you everything.
+    </p>
+
+    <!-- Control Button -->
+    <button onclick="openChat()" class="chat-btn bg-red-600 hover:bg-red-700 text-white text-lg font-semibold px-6 py-3 rounded-full mt-6 transition">
+      Control Greediness
+    </button>
+  </section>
+
+  <!-- Modal Popup -->
+  <div id="chatModal" class="hidden fixed inset-0 z-50 flex items-center justify-center modal-backdrop">
+    <div class="relative w-full max-w-3xl bg-zinc-900 rounded-2xl shadow-xl overflow-hidden animate-fade-in">
+      
+      <!-- Close button -->
+      <button onclick="closeChat()" class="absolute top-3 right-4 text-white text-3xl hover:text-red-400">
+        &times;
+      </button>
+
+      <!-- Chat iframe -->
+      <iframe
+        src="https://www.chatbase.co/chatbot-iframe/NgMlX-JWAsd3-inybxAl2"
+        width="100%"
+        style="height: 700px; border: none;"
+        frameborder="0">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Motivational Image Section -->
+  <section class="grid grid-cols-1 sm:grid-cols-2 gap-8 px-6 py-12 max-w-6xl mx-auto">
+    <div class="flex flex-col items-center text-center space-y-2">
+      <img src="assets/discipline1.jpg" alt="Discipline Image 1" class="image-style" />
+      <span class="text-zinc-300 text-lg font-semibold">Focus</span>
+    </div>
+    <div class="flex flex-col items-center text-center space-y-2">
+      <img src="assets/discipline2.jpg" alt="Discipline Image 2" class="image-style" />
+      <span class="text-zinc-300 text-lg font-semibold">Control</span>
+    </div>
+    <div class="flex flex-col items-center text-center space-y-2">
+      <img src="assets/discipline3.jpg" alt="Discipline Image 3" class="image-style" />
+      <span class="text-zinc-300 text-lg font-semibold">Discipline</span>
+    </div>
+    <div class="flex flex-col items-center text-center space-y-2">
+      <img src="assets/discipline4.jpg" alt="Discipline Image 4" class="image-style" />
+      <span class="text-zinc-300 text-lg font-semibold">Walk Away Rich</span>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-8 text-zinc-500">
+    &copy; 2025 Aaria Greed Guard • Made to Protect Your Wins
+  </footer>
+
+  <!-- Scroll Reveal -->
+  <script>
+    ScrollReveal().reveal('#subhead', {
+      delay: 500,
+      origin: 'bottom',
+      distance: '20px',
+      duration: 800
+    });
+
+    function openChat() {
+      document.getElementById('chatModal').classList.remove('hidden');
+    }
+
+    function closeChat() {
+      document.getElementById('chatModal').classList.add('hidden');
+    }
+  </script>
+
+  <!-- Animation -->
+  <style>
+    @keyframes fade-in {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .animate-fade-in {
+      animation: fade-in 0.4s ease-out;
+    }
+  </style>
+
+</body>
+</html>
